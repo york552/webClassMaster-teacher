@@ -18,6 +18,7 @@
 		CF6A4C5425FA1CBD001D9B53 /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6A4C5325FA1CBD001D9B53 /* ______Tests.m */; };
 		CF6A4C5F25FA1CBD001D9B53 /* ______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6A4C5E25FA1CBD001D9B53 /* ______UITests.m */; };
 		CF6A4C8A25FA204D001D9B53 /* ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6A4C8925FA204D001D9B53 /* ClassViewController.m */; };
+		CF75C7A32604A41100CC29CB /* StudentInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF75C7A22604A41100CC29CB /* StudentInfoModel.m */; };
 		CF96A1572600860500C22454 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF96A1562600860500C22454 /* MainTabBarController.m */; };
 		CF96A15D2600866500C22454 /* CreateRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF96A15C2600866500C22454 /* CreateRoomController.m */; };
 		CF96A163260086EB00C22454 /* YKTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CF96A162260086EB00C22454 /* YKTool.m */; };
@@ -25,6 +26,9 @@
 		CF9C00AF2600D2180041F40F /* HTTPConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C00AE2600D2180041F40F /* HTTPConfiguration.m */; };
 		CF9C00B52600D3150041F40F /* SchduleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C00B42600D3150041F40F /* SchduleModel.m */; };
 		CF9C02E72601E8F00041F40F /* ClassroomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C02E62601E8F00041F40F /* ClassroomModel.m */; };
+		CFB6166E260A18F800F46522 /* StudentInfoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB6166D260A18F800F46522 /* StudentInfoListController.m */; };
+		CFB6167D260AE74D00F46522 /* UIColor+YKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB6167C260AE74D00F46522 /* UIColor+YKColor.m */; };
+		CFB6168F260AEA7500F46522 /* StudentInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB6168E260AEA7500F46522 /* StudentInfoViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,8 @@
 		CF6A4C6025FA1CBD001D9B53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF6A4C8825FA204D001D9B53 /* ClassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassViewController.h; sourceTree = "<group>"; };
 		CF6A4C8925FA204D001D9B53 /* ClassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassViewController.m; sourceTree = "<group>"; };
+		CF75C7A12604A41100CC29CB /* StudentInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentInfoModel.h; sourceTree = "<group>"; };
+		CF75C7A22604A41100CC29CB /* StudentInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentInfoModel.m; sourceTree = "<group>"; };
 		CF96A1552600860500C22454 /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		CF96A1562600860500C22454 /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		CF96A15B2600866500C22454 /* CreateRoomController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateRoomController.h; sourceTree = "<group>"; };
@@ -83,6 +89,12 @@
 		CF9C02E52601E8F00041F40F /* ClassroomModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassroomModel.h; sourceTree = "<group>"; };
 		CF9C02E62601E8F00041F40F /* ClassroomModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassroomModel.m; sourceTree = "<group>"; };
 		CF9C03382601FEDE0041F40F /* URL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
+		CFB6166C260A18F800F46522 /* StudentInfoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentInfoListController.h; sourceTree = "<group>"; };
+		CFB6166D260A18F800F46522 /* StudentInfoListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentInfoListController.m; sourceTree = "<group>"; };
+		CFB6167B260AE74D00F46522 /* UIColor+YKColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+YKColor.h"; sourceTree = "<group>"; };
+		CFB6167C260AE74D00F46522 /* UIColor+YKColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YKColor.m"; sourceTree = "<group>"; };
+		CFB6168D260AEA7500F46522 /* StudentInfoViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentInfoViewCell.h; sourceTree = "<group>"; };
+		CFB6168E260AEA7500F46522 /* StudentInfoViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentInfoViewCell.m; sourceTree = "<group>"; };
 		D0D0909157B21D3332E92AA0 /* Pods-网课通教师版.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网课通教师版.release.xcconfig"; path = "Target Support Files/Pods-网课通教师版/Pods-网课通教师版.release.xcconfig"; sourceTree = "<group>"; };
 		DDDC62F5C72974002C221BE8 /* libPods-网课通教师版Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网课通教师版Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71F67A07ACBDD9101944829 /* Pods-网课通教师版-网课通教师版UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网课通教师版-网课通教师版UITests.debug.xcconfig"; path = "Target Support Files/Pods-网课通教师版-网课通教师版UITests/Pods-网课通教师版-网课通教师版UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,8 +164,10 @@
 		CF6A4C3625FA1CBA001D9B53 /* 网课通教师版 */ = {
 			isa = PBXGroup;
 			children = (
-				CF9C00952600D1370041F40F /* Service */,
+				CF9EDE442609E03500A4DC74 /* Class */,
+				CF75C79F2604A3E600CC29CB /* Student */,
 				CF96A1682600879700C22454 /* Classroom */,
+				CF9C00952600D1370041F40F /* Service */,
 				CF96A1672600877A00C22454 /* Tool */,
 				CF6A4C3725FA1CBA001D9B53 /* AppDelegate.h */,
 				CF6A4C3825FA1CBA001D9B53 /* AppDelegate.m */,
@@ -186,11 +200,32 @@
 			path = "网课通教师版UITests";
 			sourceTree = "<group>";
 		};
+		CF75C79F2604A3E600CC29CB /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				CF75C7A02604A3EF00CC29CB /* Model */,
+				CFB6168B260AEA1700F46522 /* View */,
+				CFB6168A260AEA0900F46522 /* Controller */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		CF75C7A02604A3EF00CC29CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF75C7A12604A41100CC29CB /* StudentInfoModel.h */,
+				CF75C7A22604A41100CC29CB /* StudentInfoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CF96A1672600877A00C22454 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
 				CF96A161260086EB00C22454 /* YKTool.h */,
 				CF96A162260086EB00C22454 /* YKTool.m */,
+				CFB6167B260AE74D00F46522 /* UIColor+YKColor.h */,
+				CFB6167C260AE74D00F46522 /* UIColor+YKColor.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -234,6 +269,39 @@
 			children = (
 				CF9C02E52601E8F00041F40F /* ClassroomModel.h */,
 				CF9C02E62601E8F00041F40F /* ClassroomModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF9EDE442609E03500A4DC74 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				CFB6168C260AEA2300F46522 /* Model */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		CFB6168A260AEA0900F46522 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFB6166C260A18F800F46522 /* StudentInfoListController.h */,
+				CFB6166D260A18F800F46522 /* StudentInfoListController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFB6168B260AEA1700F46522 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFB6168D260AEA7500F46522 /* StudentInfoViewCell.h */,
+				CFB6168E260AEA7500F46522 /* StudentInfoViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFB6168C260AEA2300F46522 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -490,12 +558,16 @@
 			files = (
 				CF96A15D2600866500C22454 /* CreateRoomController.m in Sources */,
 				CF6A4C8A25FA204D001D9B53 /* ClassViewController.m in Sources */,
+				CFB6168F260AEA7500F46522 /* StudentInfoViewCell.m in Sources */,
 				CF6A4C3925FA1CBA001D9B53 /* AppDelegate.m in Sources */,
+				CF75C7A32604A41100CC29CB /* StudentInfoModel.m in Sources */,
 				CF9C00992600D1530041F40F /* HttpManager.m in Sources */,
 				CF9C00B52600D3150041F40F /* SchduleModel.m in Sources */,
 				CF9C02E72601E8F00041F40F /* ClassroomModel.m in Sources */,
 				CF96A1572600860500C22454 /* MainTabBarController.m in Sources */,
 				CF6A4C4A25FA1CBC001D9B53 /* main.m in Sources */,
+				CFB6166E260A18F800F46522 /* StudentInfoListController.m in Sources */,
+				CFB6167D260AE74D00F46522 /* UIColor+YKColor.m in Sources */,
 				CF9C00AF2600D2180041F40F /* HTTPConfiguration.m in Sources */,
 				CF96A163260086EB00C22454 /* YKTool.m in Sources */,
 			);
