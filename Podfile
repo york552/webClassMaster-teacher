@@ -15,6 +15,7 @@ target '网课通教师版' do
   pod 'AFNetworking'
   pod 'YYModel'
   pod 'BmobSDK'
+  pod 'MJRefresh'
 
   target '网课通教师版Tests' do
     inherit! :search_paths

@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
 #import "ClassViewController.h"
+#import <BmobSDK/Bmob.h>
 @interface AppDelegate ()
 @end
 
@@ -16,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Bmob registerWithAppKey:@"263ca60ec151c73cb603cc1409b74da6"];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
 
     MainTabBarController * tabBarController = [[MainTabBarController alloc]init];

@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - AgoraRtcEngine_iOS (3.2.1)
   - AgoraRtm_iOS (1.4.3)
+  - BmobSDK (2.4.1)
   - LxTabBarController (1.0.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - AFNetworking
   - AgoraRtcEngine_iOS
   - AgoraRtm_iOS
+  - BmobSDK
   - LxTabBarController (~> 1.0.0)
   - Masonry
   - MBProgressHUD (~> 1.2.0)
@@ -35,6 +37,7 @@ SPEC REPOS:
     - AFNetworking
     - AgoraRtcEngine_iOS
     - AgoraRtm_iOS
+    - BmobSDK
     - LxTabBarController
     - Masonry
     - MBProgressHUD
@@ -44,11 +47,12 @@ SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   AgoraRtcEngine_iOS: bf8ee53108d31dd9e3b7e448701b9098162c42c7
   AgoraRtm_iOS: 178257883dd6773d3d26ca51045456c35221b715
+  BmobSDK: 930525437e6602f7146108e11a9796604a1edbb9
   LxTabBarController: 47773fa57189cb83835c119cc7a82c112565f33b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 788b243aed7ca28e1a5387a7a560fedb3f7cbd63
+PODFILE CHECKSUM: d48eb69ff08c1bd8bc63b7999742d7a74832efbb
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1

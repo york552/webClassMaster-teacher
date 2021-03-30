@@ -41,7 +41,7 @@
 
 - (UINavigationController *)nav2{
     if (!_nav2) {
-        _nav2 = [[UINavigationController alloc] initWithRootViewController:[[StudentInfoListController alloc]init]];
+        _nav2 = [[UINavigationController alloc]init];
         _nav2.tabBarItem.image = [UIImage imageNamed:@"Class_tabIcon"];
         _nav2.tabBarItem.title = @"课程";
     }
@@ -49,9 +49,9 @@
 }
 - (UINavigationController *)nav3{
     if (!_nav3) {
-        _nav3 = [[UINavigationController alloc]init];
+        _nav3 = [[UINavigationController alloc] initWithRootViewController:[[StudentInfoListController alloc]init]];
         _nav3.tabBarItem.image = [UIImage imageNamed:@"Student_tabIcon"];
-        _nav3.tabBarItem.title = @"学生";
+        _nav3.tabBarItem.title = @"学生信息";
     }
     return _nav3;
 }

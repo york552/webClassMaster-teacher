@@ -29,6 +29,8 @@
 		CFB6166E260A18F800F46522 /* StudentInfoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB6166D260A18F800F46522 /* StudentInfoListController.m */; };
 		CFB6167D260AE74D00F46522 /* UIColor+YKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB6167C260AE74D00F46522 /* UIColor+YKColor.m */; };
 		CFB6168F260AEA7500F46522 /* StudentInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB6168E260AEA7500F46522 /* StudentInfoViewCell.m */; };
+		CFB6196C260CB44700F46522 /* StudentDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB6196B260CB44700F46522 /* StudentDetailController.m */; };
+		CFB61972260CBB8F00F46522 /* StudentDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB61971260CBB8F00F46522 /* StudentDetailViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,10 @@
 		CFB6167C260AE74D00F46522 /* UIColor+YKColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YKColor.m"; sourceTree = "<group>"; };
 		CFB6168D260AEA7500F46522 /* StudentInfoViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentInfoViewCell.h; sourceTree = "<group>"; };
 		CFB6168E260AEA7500F46522 /* StudentInfoViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentInfoViewCell.m; sourceTree = "<group>"; };
+		CFB6196A260CB44700F46522 /* StudentDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentDetailController.h; sourceTree = "<group>"; };
+		CFB6196B260CB44700F46522 /* StudentDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentDetailController.m; sourceTree = "<group>"; };
+		CFB61970260CBB8F00F46522 /* StudentDetailViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentDetailViewCell.h; sourceTree = "<group>"; };
+		CFB61971260CBB8F00F46522 /* StudentDetailViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentDetailViewCell.m; sourceTree = "<group>"; };
 		D0D0909157B21D3332E92AA0 /* Pods-网课通教师版.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网课通教师版.release.xcconfig"; path = "Target Support Files/Pods-网课通教师版/Pods-网课通教师版.release.xcconfig"; sourceTree = "<group>"; };
 		DDDC62F5C72974002C221BE8 /* libPods-网课通教师版Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网课通教师版Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71F67A07ACBDD9101944829 /* Pods-网课通教师版-网课通教师版UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网课通教师版-网课通教师版UITests.debug.xcconfig"; path = "Target Support Files/Pods-网课通教师版-网课通教师版UITests/Pods-网课通教师版-网课通教师版UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -286,6 +292,8 @@
 			children = (
 				CFB6166C260A18F800F46522 /* StudentInfoListController.h */,
 				CFB6166D260A18F800F46522 /* StudentInfoListController.m */,
+				CFB6196A260CB44700F46522 /* StudentDetailController.h */,
+				CFB6196B260CB44700F46522 /* StudentDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,6 +303,8 @@
 			children = (
 				CFB6168D260AEA7500F46522 /* StudentInfoViewCell.h */,
 				CFB6168E260AEA7500F46522 /* StudentInfoViewCell.m */,
+				CFB61970260CBB8F00F46522 /* StudentDetailViewCell.h */,
+				CFB61971260CBB8F00F46522 /* StudentDetailViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +400,7 @@
 				TargetAttributes = {
 					CF6A4C3325FA1CBA001D9B53 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					CF6A4C4E25FA1CBC001D9B53 = {
 						CreatedOnToolsVersion = 12.2;
@@ -563,6 +574,7 @@
 				CF75C7A32604A41100CC29CB /* StudentInfoModel.m in Sources */,
 				CF9C00992600D1530041F40F /* HttpManager.m in Sources */,
 				CF9C00B52600D3150041F40F /* SchduleModel.m in Sources */,
+				CFB61972260CBB8F00F46522 /* StudentDetailViewCell.m in Sources */,
 				CF9C02E72601E8F00041F40F /* ClassroomModel.m in Sources */,
 				CF96A1572600860500C22454 /* MainTabBarController.m in Sources */,
 				CF6A4C4A25FA1CBC001D9B53 /* main.m in Sources */,
@@ -570,6 +582,7 @@
 				CFB6167D260AE74D00F46522 /* UIColor+YKColor.m in Sources */,
 				CF9C00AF2600D2180041F40F /* HTTPConfiguration.m in Sources */,
 				CF96A163260086EB00C22454 /* YKTool.m in Sources */,
+				CFB6196C260CB44700F46522 /* StudentDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +755,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5S23RF65HV;
 				INFOPLIST_FILE = "网课通教师版/Info.plist";
@@ -752,6 +767,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "york.------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -762,6 +779,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5S23RF65HV;
 				INFOPLIST_FILE = "网课通教师版/Info.plist";
@@ -772,6 +791,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "york.------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -16,15 +16,15 @@ typedef NS_ENUM(NSInteger, StudentRole) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface StudentInfoModel : NSObject
+@interface StudentInfoModel : NSObject 
 
 @property (nonatomic, strong)NSString *num;
 
 @property (nonatomic, strong)NSString *name;
 
-@property (nonatomic, assign)int gender;
+@property (nonatomic, strong)NSString *gender;
 
-@property (nonatomic, assign)int *age;
+@property (nonatomic, assign)NSNumber *age;
 
 @property (nonatomic, strong)NSString *telephone;
 
@@ -32,9 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong)NSString *major;
 
-@property (nonatomic, assign)int attendance;
+@property (nonatomic, strong)NSString *studentClass;
 
-@property (nonatomic, assign)StudentRole *role;
+@property (nonatomic, assign)NSNumber *attendance;
+
+@property (nonatomic, assign)StudentRole role;
 @end
 
 NS_ASSUME_NONNULL_END
