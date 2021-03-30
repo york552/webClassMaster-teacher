@@ -15,9 +15,8 @@
 @end
 
 @implementation StudentDetailViewCell
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    if (self = [super initWithFrame:frame]) {
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.contentView.backgroundColor = UIColor.whiteColor;
         [self setUI];
     }
@@ -26,8 +25,8 @@
 
 #pragma mark -UI
 - (void)setUI {
-    [self.contentView addSubview:self.leftLabel];
-    [self.contentView addSubview:self.rightLabel];
+    [self addSubview:self.leftLabel];
+    [self addSubview:self.rightLabel];
     [self.leftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).offset(12);
         make.centerY.equalTo(self);
@@ -64,7 +63,7 @@
     if (!_rightLabel) {
         _rightLabel = [UILabel new];
         _rightLabel.font = [UIFont systemFontOfSize:16];
-        _rightLabel.textColor = [UIColor colorWithHexString:@"#C8C9CC"];
+        _rightLabel.textColor = [UIColor blackColor];
         _rightLabel.textAlignment = NSTextAlignmentRight;
     }
     return _rightLabel;

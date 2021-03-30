@@ -9,17 +9,20 @@
 #import "StudentDetailController.h"
 #import "UIColor+YKColor.h"
 #import "StudentInfoViewCell.h"
+#import "StudentSearchView.h"
 #import "StudentInfoModel.h"
 #import <BmobSDK/Bmob.h>
 #import <YYModel/YYModel.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Masonry/Masonry.h>
+#import <MJRefresh/MJRefresh.h>
 
 @interface StudentInfoListController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
-@property (nonatomic, strong) StudentDetailController *detailViewController;
-@property (nonatomic, strong) UICollectionView *studentCollectionView;
-@property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
-@property (nonatomic, strong) NSMutableArray *modelArray;
+@property (nonatomic, strong)StudentDetailController *detailViewController;
+@property (nonatomic, strong)UICollectionView *studentCollectionView;
+@property (nonatomic, strong)UICollectionViewFlowLayout *flowLayout;
+@property (nonatomic, strong)NSMutableArray *modelArray;
+@property (nonatomic, strong)StudentSearchView *searchView;
 @end
 
 @implementation StudentInfoListController
@@ -30,18 +33,24 @@
     self.navigationController.navigationBar.translucent = NO;
     self.view.backgroundColor = [UIColor colorWithHex:0xF7F8FA];
     self.modelArray = [[NSMutableArray alloc]init];
-    [self getStudentInfoModel];
     [self setUpUI];
 }
 
 - (void)setUpUI {
     [self.view addSubview:self.studentCollectionView];
-    [self.studentCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:self.searchView];
+    [self.searchView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_topLayoutGuide);
+        make.right.left.equalTo(self.view).inset(16);
+        make.height.mas_equalTo(32);
+    }];
+    [self.studentCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.searchView.mas_bottom);
         make.bottom.equalTo(self.mas_bottomLayoutGuide);
         make.left.equalTo(self.view.mas_left);
         make.right.equalTo(self.view.mas_right);
     }];
+    [self.studentCollectionView.mj_header beginRefreshing];
 }
 
 #pragma mark -Lazy
@@ -66,6 +75,9 @@
         _studentCollectionView.showsHorizontalScrollIndicator = false;
         _studentCollectionView.showsVerticalScrollIndicator = false;
         [_studentCollectionView registerClass:[StudentInfoViewCell class] forCellWithReuseIdentifier:NSStringFromClass([StudentInfoViewCell class])];
+        MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getStudentInfoModel)];
+        self.studentCollectionView.mj_header = header;
+        header.lastUpdatedTimeLabel.hidden = YES;
     }
     return _studentCollectionView;
 }
@@ -75,6 +87,14 @@
         _detailViewController = [[StudentDetailController alloc]init];
     }
     return _detailViewController;
+}
+
+- (StudentSearchView *)searchView {
+    if (!_searchView) {
+        _searchView = [[StudentSearchView alloc]init];
+        _searchView.layer.cornerRadius = 16;
+    }
+    return _searchView;
 }
 
 #pragma mark -Datasourse && Delegate
@@ -106,10 +126,12 @@
 #pragma mark -Net
 - (void)getStudentInfoModel {
     BmobQuery *bquery = [BmobQuery queryWithClassName:@"StudentInfo"];
-    [MBProgressHUD showHUDAddedTo:self.studentCollectionView animated:YES];
+    [self.studentCollectionView.mj_header beginRefreshing];
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-        [MBProgressHUD hideHUDForView:self.studentCollectionView animated:YES];
+        [self.studentCollectionView.mj_header endRefreshing];
         if (error){
+            NSLog(@"请求失败:%@",error);
+            
             return;
         }else if (array) {
             for (BmobObject *obj in array) {

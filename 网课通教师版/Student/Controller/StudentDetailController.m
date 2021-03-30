@@ -31,9 +31,8 @@
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_topLayoutGuide).offset(12);
-        make.left.equalTo(self.view).offset(12);
-        make.right.equalTo(self.view).offset(-12);
-        make.height.mas_equalTo(520);
+        make.size.mas_equalTo(CGSizeMake([UIScreen mainScreen].bounds.size.width - 24, 520));
+        make.centerX.equalTo(self.view);
     }];
 }
 
@@ -51,6 +50,7 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         _tableView.layer.cornerRadius = 6;
         _tableView.layer.masksToBounds = YES;
+        _tableView.allowsSelection = NO;
         [_tableView setScrollEnabled:NO];
         [_tableView registerClass:[StudentDetailViewCell class] forCellReuseIdentifier:NSStringFromClass([StudentDetailViewCell class])];
     }
@@ -77,7 +77,7 @@
         cell.rightText = self.studentModel.major;
     } else if (indexPath.row == 5) {
         cell.leftText = @"班级";
-        cell.rightText = [NSString stringWithFormat:@"%@",self.studentModel.class];
+        cell.rightText = [NSString stringWithFormat:@"%@",self.studentModel.studentClass];
     } else if (indexPath.row == 6) {
         cell.leftText = @"绩点";
         cell.rightText = self.studentModel.GPA;
@@ -102,7 +102,7 @@
     return 1;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 52;
 }
 @end

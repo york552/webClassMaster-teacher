@@ -19,6 +19,7 @@
 		CF6A4C5F25FA1CBD001D9B53 /* ______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6A4C5E25FA1CBD001D9B53 /* ______UITests.m */; };
 		CF6A4C8A25FA204D001D9B53 /* ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6A4C8925FA204D001D9B53 /* ClassViewController.m */; };
 		CF75C7A32604A41100CC29CB /* StudentInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF75C7A22604A41100CC29CB /* StudentInfoModel.m */; };
+		CF94173726130AA100DB3933 /* StudentSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF94173626130AA100DB3933 /* StudentSearchView.m */; };
 		CF96A1572600860500C22454 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF96A1562600860500C22454 /* MainTabBarController.m */; };
 		CF96A15D2600866500C22454 /* CreateRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF96A15C2600866500C22454 /* CreateRoomController.m */; };
 		CF96A163260086EB00C22454 /* YKTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CF96A162260086EB00C22454 /* YKTool.m */; };
@@ -76,6 +77,8 @@
 		CF6A4C8925FA204D001D9B53 /* ClassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassViewController.m; sourceTree = "<group>"; };
 		CF75C7A12604A41100CC29CB /* StudentInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentInfoModel.h; sourceTree = "<group>"; };
 		CF75C7A22604A41100CC29CB /* StudentInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentInfoModel.m; sourceTree = "<group>"; };
+		CF94173526130AA100DB3933 /* StudentSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentSearchView.h; sourceTree = "<group>"; };
+		CF94173626130AA100DB3933 /* StudentSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentSearchView.m; sourceTree = "<group>"; };
 		CF96A1552600860500C22454 /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		CF96A1562600860500C22454 /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		CF96A15B2600866500C22454 /* CreateRoomController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateRoomController.h; sourceTree = "<group>"; };
@@ -305,6 +308,8 @@
 				CFB6168E260AEA7500F46522 /* StudentInfoViewCell.m */,
 				CFB61970260CBB8F00F46522 /* StudentDetailViewCell.h */,
 				CFB61971260CBB8F00F46522 /* StudentDetailViewCell.m */,
+				CF94173526130AA100DB3933 /* StudentSearchView.h */,
+				CF94173626130AA100DB3933 /* StudentSearchView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 				CF6A4C3125FA1CBA001D9B53 /* Frameworks */,
 				CF6A4C3225FA1CBA001D9B53 /* Resources */,
 				4285C59C0C934728770F6F1C /* [CP] Embed Pods Frameworks */,
+				CFD4B4FA7CB10253CDF67A46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -379,6 +385,7 @@
 				CF6A4C5725FA1CBD001D9B53 /* Frameworks */,
 				CF6A4C5825FA1CBD001D9B53 /* Resources */,
 				E50AE5F5FC8B066BAFEE5603 /* [CP] Embed Pods Frameworks */,
+				AE80FE1F6CCAC63EF1D9A0D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -499,6 +506,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-网课通教师版/Pods-网课通教师版-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AE80FE1F6CCAC63EF1D9A0D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-网课通教师版-网课通教师版UITests/Pods-网课通教师版-网课通教师版UITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-网课通教师版-网课通教师版UITests/Pods-网课通教师版-网课通教师版UITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-网课通教师版-网课通教师版UITests/Pods-网课通教师版-网课通教师版UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B1CB9FDAD0AF2AF35F824453 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,6 +567,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CFD4B4FA7CB10253CDF67A46 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-网课通教师版/Pods-网课通教师版-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-网课通教师版/Pods-网课通教师版-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-网课通教师版/Pods-网课通教师版-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E50AE5F5FC8B066BAFEE5603 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -580,6 +621,7 @@
 				CF6A4C4A25FA1CBC001D9B53 /* main.m in Sources */,
 				CFB6166E260A18F800F46522 /* StudentInfoListController.m in Sources */,
 				CFB6167D260AE74D00F46522 /* UIColor+YKColor.m in Sources */,
+				CF94173726130AA100DB3933 /* StudentSearchView.m in Sources */,
 				CF9C00AF2600D2180041F40F /* HTTPConfiguration.m in Sources */,
 				CF96A163260086EB00C22454 /* YKTool.m in Sources */,
 				CFB6196C260CB44700F46522 /* StudentDetailController.m in Sources */,
